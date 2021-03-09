@@ -1,0 +1,14 @@
+
+
+
+{% load crispy_forms_tags %}
+
+<form method="POST" action="{% url 'studentsdash' %}">
+    {% csrf_token %}
+    <table>
+        {{form | crispy }}
+    </table>
+    
+    <br>
+    <input value="Send" type="submit">
+</form>
